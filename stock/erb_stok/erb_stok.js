@@ -7,7 +7,7 @@ const path = require('path');
 
 async function stokErb() {
   await (async function () {
-    const PORT = 5796;
+    const PORT = 5776;
 
     const app = express()
 

@@ -12,7 +12,7 @@ async function instaPost() {
   app.listen(PORT, () => console.log(chalk.bgGreen(`Server running on PORT ${PORT}`)))
 
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: 'new',
     executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe',
     userDataDir: '/Users/athee/Library/Application Support/Google/Chrome/Default',
     timeout: 0,
@@ -34,7 +34,7 @@ async function instaPost() {
 
         var json = JSON.parse(fs.readFileSync('D:/Own_Projects/07_web_scarper/insta_post/insta_foto.json').toString());
 
-        var a = Math.floor(Math.random() * 465);
+        var a = Math.floor(Math.random() * json.foto.length);
 
         console.log(a)
 
