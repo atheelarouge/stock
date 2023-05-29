@@ -18,6 +18,7 @@ const boa_stok = require('../stock/boa_stok/boa_stok')
 const co_stok = require('../stock/co_stok/co_stok')
 const oto_erb = require ('../stock/erb_stok/oto_erb')
 const reklam = require('../reklam/reklam_tik.js')
+const oto_fiyat = require('../fiyat/oto_fiyat.js')
 
 program
   .command('boa')
@@ -108,6 +109,11 @@ program
   .command('reklam')
   .description('get tbr')
   .action(reklam)
+
+program
+  .command('oto_fiyat')
+  .description('Fiyat düzenler')
+  .action(oto_fiyat)
 
 
 program.parse(process.argv)

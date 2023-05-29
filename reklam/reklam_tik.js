@@ -29,56 +29,118 @@ async function reklam_tik() {
     }
 
     app.listen(PORT, () => console.log(`Server is running on port ${PORT}`.bgGreen))
+
+    let json = JSON.parse(fs.readFileSync(path.join(__dirname, 'reklam_link.json')))
+
+    let veriLength = json.link.length
+    let linkVeri = json.link
+
+
     
-      await (async function reklam() {
-        try {
-          await(async function () {
-            const browser = await puppeteer.launch({
-              headless: true,
-              executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe',
-              userDataDir: '/Users/athee/Library/Application Support/Google/Chrome/Default',
-            })
-            // Login
-  
-            const page = await browser.newPage();
-  
-            await page.goto("https://partner.trendyol.com/seller-ads/product/edit-advert/e672bebf-42c1-46b5-b378-a67d67583463?showBudgetContainer=false", {
+    
+    await (async function kadinfun1() {
+      try {
+        await (async function () {
+          const browser = await puppeteer.launch({
+            headless: false,
+            timeout: 0,
+            defaultViewport: null,
+          })
+
+          // Login
+          const page = await browser.newPage();
+
+          
+          // Loop Function
+           for (i = 0; i < veriLength; i++ ) {
+
+            
+            console.log(linkVeri[i])
+
+            await page.goto(linkVeri[i], {
               waitUntil: 'networkidle2'
             })
-  
-            // Erkek CPC
-            for(i = 0; i < 10000; i++) {
-              try {
-                const erkekveri = await page.evaluate(() => {
-                  return document.querySelector('#app > div.sc-laZRCg.jHpBAj > div.product-advert-detail-container > div > div.TuMdlibeAKzQN1BoUPXA > div > div.FHwJPZ_6f43tjqz022Z9 > div.KdiA64W77pRy68fGGuTz').innerHTML
-                })
-                const date = moment().format().split('T')[1].split('+')[0]
-  
-                data = loadNotes()
-      
-                await data.push({
-                  "Reklam_Ad": `erkek_senaker_03`,
-                  "CPC": erkekveri,
-                  "Time": date,
-                })
-                await saveNotes(data)
-      
-                await console.log(`Data saved at ${date} => CPC=${erkekveri}`.bgCyan)
-      
-                await page.waitForTimeout(900000)
-                await page.reload({ waitUntil: ["networkidle2"] });
 
-              } catch (error) {
-                console.log('Data can not get'.bgRed)
-              }
+            await (async function() {
+
+              try {
+
+                var reklam_ad = await page.evaluate(() => {
+                  try {
+                    return document.querySelector('bl-input[class="oc_ZZggwct6kOdpMjeEA"').getAttribute('value')
+                  } catch {
+                    return 0
+                  }
+                })
+
+                // var minR = await page.evaluate(() => {
+                //   try {
+                //     return document.querySelector("KdiA64W77pRy68fGGuTz").innerHTML
+                //   } catch {
+                //     return 0
+                //   }
+                // })
+
+                // var midR = await page.evaluate(() => {
+                //   try {
+                //     return document.querySelector("KdiA64W77pRy68fGGuTz").innerHTML
+                //   } catch {
+                //     return 0
+                //   }
+                // })
+
+                // var maxR = await page.evaluate(() => {
+                //   try {
+                //     return document.querySelector("KdiA64W77pRy68fGGuTz").innerHTML
+                //   } catch {
+                //     return 0
+                //   }
+                // })
+
+    
+                
+    
+                data = loadNotes()
+    
+                data.push({
+                  "Reklam Adı": reklam_ad,
+                  // "Min": minR,
+                  // "Mid": midR,
+                  // "maxR": maxR
+                })
+    
+    
+                await saveNotes(data)
+    
+                await console.log(`Data puhsed ${reklam_ad}...`.bgCyan)
+    
+              } catch (err) {
+                data = loadNotes()
+    
+                data.push({
+                  "Reklam Adı": reklam_ad,
+                  "Min": "DNG",
+                  "Mid": "DNG",
+                  "maxR": "DNG"
+                })
+
+                await console.log(err)
   
-            }
-          })()
-        } catch (e){
-          console.log('Something went wrong'.bgRed, e)
-        }
-      
-      })()
+                await saveNotes(data)
+  
+              }
+              
+            })()
+
+
+           }
+          
+
+        })();
+      } catch (err) {
+        console.log(err, `General error`.bgred)
+      }
+    })();
     
   })()
   
