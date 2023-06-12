@@ -19,6 +19,7 @@ const co_stok = require('../stock/co_stok/co_stok')
 const oto_erb = require ('../stock/erb_stok/oto_erb')
 const reklam = require('../reklam/reklam_tik.js')
 const oto_fiyat = require('../fiyat/oto_fiyat.js')
+const erb_expExl = require('../stock/erb_stok/erb_export.js')
 
 program
   .command('boa')
@@ -114,6 +115,11 @@ program
   .command('oto_fiyat')
   .description('Fiyat düzenler')
   .action(oto_fiyat)
+
+program
+  .command('exl_erb')
+  .description('Erbilden Excel Çıkarır')
+  .action(erb_expExl)
 
 
 program.parse(process.argv)

@@ -459,7 +459,11 @@
         "https://www.bayiboa.com/ba0591-tarz-sneakers-ithal-beyaz-triko-rahat-taban-spor-ayakkabisi-p2153?search=591",
         "https://www.bayiboa.com/ba0591-tarz-sneakers-ithal-gri-kircilli-triko-rahat-taban-spor-ayakkabisi-p2155?search=591",
         "https://www.bayiboa.com/ba0591-tarz-sneakers-ithal-gri-triko-rahat-taban-spor-ayakkabisi-p2154?search=591",
-        "https://www.bayiboa.com/ba0591-tarz-sneakers-ithal-krem-triko-rahat-taban-spor-ayakkabisi-p2156?search=591"
+        "https://www.bayiboa.com/ba0591-tarz-sneakers-ithal-krem-triko-rahat-taban-spor-ayakkabisi-p2156?search=591",
+        "https://www.bayiboa.com/yuksek-taban-erkek-bodrum-ip-halat-sandalet-krem-p2231?search=sandalet",
+        "https://www.bayiboa.com/yuksek-taban-erkek-bodrum-ip-halat-sandalet-siyah-p2232?search=sandalet",
+        "https://www.bayiboa.com/yuksek-taban-erkek-bodrum-ip-halat-sandalet-taba-p2233?search=sandalet",
+        "https://www.bayiboa.com/yuksek-taban-erkek-bodrum-ip-halat-sandalet-vizon-p2230?search=sandalet"
         
     ],
     "barkod": [
@@ -922,7 +926,11 @@
         "RNNB591BYZTRKBT",
         "RNNB591GRİKRCTRKGT",
         "RNNB591GRİTRKGT",
-        "RNNB591KRMTRKKT"
+        "RNNB591KRMTRKKT",
+        "RNNBBODRUMKREMHLT",
+        "RNNBBODRUMSYHHLT",
+        "RNNBBODRUMTABAHLT",
+        "RNNBBODRUMVZNHLT"
 
 
     ],
@@ -1386,7 +1394,11 @@
         "11239",
         "11251",
         "11245",
-        "11257"
+        "11257",
+        "11601",
+        "11606",
+        "11611",
+        "11596"
 
     ]
 }
