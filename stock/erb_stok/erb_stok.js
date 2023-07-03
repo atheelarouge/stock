@@ -155,42 +155,42 @@ async function stokErb() {
                   "Barkod": `${barkodVeri[i]}35`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(erb01_35),
+                  "Ürün Stok Adedi": parseInt(erb01_35)-1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}36`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(erb01_36),
+                  "Ürün Stok Adedi": parseInt(erb01_36)-1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}37`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(erb01_37),
+                  "Ürün Stok Adedi": parseInt(erb01_37)-1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}38`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(erb01_38),
+                  "Ürün Stok Adedi": parseInt(erb01_38)-1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}39`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(erb01_39),
+                  "Ürün Stok Adedi": parseInt(erb01_39)-1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}40`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(erb01_40),
+                  "Ürün Stok Adedi": parseInt(erb01_40)-1,
                 })
     
                 await saveNotes(data)

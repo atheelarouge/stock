@@ -158,49 +158,49 @@ async function stokWagoon() {
                   "Barkod": `${barkodVeri[i]}39`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(boa01_39),
+                  "Ürün Stok Adedi": parseInt(boa01_39)-1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}40`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(boa01_40),
+                  "Ürün Stok Adedi": parseInt(boa01_40)-1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}41`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(boa01_41),
+                  "Ürün Stok Adedi": parseInt(boa01_41)-1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}42`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(boa01_42),
+                  "Ürün Stok Adedi": parseInt(boa01_42)-1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}43`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(boa01_43),
+                  "Ürün Stok Adedi": parseInt(boa01_43)-1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}44`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(boa01_44),
+                  "Ürün Stok Adedi": parseInt(boa01_44)-1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}45`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(boa01_45),
+                  "Ürün Stok Adedi": parseInt(boa01_45)-1,
                 })
     
                 await saveNotes(data)
