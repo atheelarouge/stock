@@ -2,7 +2,7 @@ const fs = require('fs')
 
 async function fiyat_delExl() {
   await (async function() {
-    const path = "C:/Users/athee/Desktop/Oto_stokfiyat.xlsx"
+    const path = "C:/Users/athee/Desktop/Oto_stok/fiyat.xlsx"
 
     try {
       fs.unlinkSync(path)

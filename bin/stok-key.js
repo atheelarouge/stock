@@ -17,9 +17,27 @@ const oto_kadin = require('../stock/kadin_stok/oto_kadin')
 const boa_stok = require('../stock/boa_stok/boa_stok')
 const co_stok = require('../stock/co_stok/co_stok')
 const oto_erb = require ('../stock/erb_stok/oto_erb')
-const reklam = require('../reklam/reklam_tik.js')
 const oto_fiyat = require('../fiyat/oto_fiyat.js')
 const erb_expExl = require('../stock/erb_stok/erb_export.js')
+const rnn_reklam = require('../reklam/rnn_reklam.js')
+const rnn_write = require('../reklam/rnn_write.js')
+const oto_reklam = require('../reklam/oto_reklam.js')
+
+program
+  .command('oto_reklam')
+  .description('Oto CPC')
+  .action(oto_reklam)
+
+program
+  .command('rnn_write')
+  .description('Write CPC')
+  .action(rnn_write)
+
+
+program
+  .command('rnn_reklam')
+  .description('Rnn reklam')
+  .action(rnn_reklam)
 
 program
   .command('boa')
@@ -105,11 +123,6 @@ program
   .command('oto_erb')
   .description('Erbilden Stok')
   .action(oto_erb)
-
-program
-  .command('reklam')
-  .description('get tbr')
-  .action(reklam)
 
 program
   .command('oto_fiyat')
