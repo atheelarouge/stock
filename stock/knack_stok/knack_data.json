@@ -231,7 +231,13 @@
     "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-bot-104-taba",
     "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-bot-104-siyah-siyah-taban",
     "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-bot-104-siyah-beyaz-taban",
-    "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-bot-104-vizon-suet"
+    "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-bot-104-vizon-suet",
+    "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-gunluk-ayakkabi-044-vizon-suet",
+    "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-chelsea-bot-112-siyah-siyah-taban",
+    "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-chelsea-bot-112-siyah-bej-taban",
+    "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-chelsea-bot-112-siyah-suet-bej-taban",
+    "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-chelsea-bot-112-taba-suet",
+    "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-chelsea-bot-112-vizon-suet"
 
 
   ],
@@ -467,7 +473,13 @@
       "RNNKNK104TABACLTBT",
       "RNNKNK104SYHCLTST",
       "RNNKNK104SYHCLTBT",
-      "RNNKNK104VZNSUETBT"
+      "RNNKNK104VZNSUETBT",
+      "RNNKNK044VZNVT",
+      "RNNKNK112SYHCLST",
+      "RNNKNK112SYHCLTBJT",
+      "RNNKNK112SYHSUETBJT",
+      "RNNKNK112TABASUETBJT",
+      "RNNKNK112VZNSUETVT"
 
 
 

@@ -6,7 +6,7 @@ const path = require('path')
 
 async function fiyatBoa() {
     await (async function () {
-        const PORT = 2114;
+        const PORT = 5478;
 
         const app = express()
 
@@ -51,8 +51,8 @@ async function fiyatBoa() {
                 await (async function () {
                     const browser = await puppeteer.launch({
                         headless: true,
-                        executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe',
-                        userDataDir: '/Users/arcen/Library/Application Support/Google/Chrome/Default',
+                        // executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe',
+                        // userDataDir: '/Users/arcen/Library/Application Support/Google/Chrome/Default',
                         timeout: 0,
                         defaultViewport: null,
                     })
@@ -245,8 +245,8 @@ async function fiyatBoa() {
               await (async function () {
                   const browser = await puppeteer.launch({
                       headless: true,
-                      executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe',
-                      userDataDir: '/Users/arcen/Library/Application Support/Google/Chrome/Default',
+                      // executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe',
+                      // userDataDir: '/Users/arcen/Library/Application Support/Google/Chrome/Default',
                       timeout: 0,
                       defaultViewport: null,
                   })
@@ -440,8 +440,8 @@ async function fiyatBoa() {
               await (async function () {
                   const browser = await puppeteer.launch({
                       headless: true,
-                      executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe',
-                      userDataDir: '/Users/arcen/Library/Application Support/Google/Chrome/Default',
+                      // executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe',
+                      // userDataDir: '/Users/arcen/Library/Application Support/Google/Chrome/Default',
                       timeout: 0,
                       defaultViewport: null,
                   })
@@ -635,8 +635,8 @@ async function fiyatBoa() {
               await (async function () {
                   const browser = await puppeteer.launch({
                       headless: true,
-                      executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe',
-                      userDataDir: '/Users/arcen/Library/Application Support/Google/Chrome/Default',
+                      // executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe',
+                      // userDataDir: '/Users/arcen/Library/Application Support/Google/Chrome/Default',
                       timeout: 0,
                       defaultViewport: null,
                   })

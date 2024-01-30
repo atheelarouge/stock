@@ -915,7 +915,21 @@
         "https://www.midashoes.com/mida-shoes-y3033-beyaz-deri-tokali-kadin-topuklu-ayakkabi/",
         "https://www.midashoes.com/mida-shoes-y3033-siyah-deri-tokali-kadin-topuklu-ayakkabi/",
         "https://www.midashoes.com/mida-shoes-y3033-gold-deri-tokali-kadin-topuklu-ayakkabi/",
-        "https://www.midashoes.com/mida-shoes-y3033-ten-deri-tokali-kadin-topuklu-ayakkabi/"
+        "https://www.midashoes.com/mida-shoes-y3033-ten-deri-tokali-kadin-topuklu-ayakkabi/",
+        "https://www.midashoes.com/mida-shoes-poti-siyah-deri-fermuarli-kadin-bot/",
+        "https://www.midashoes.com/mida-shoes-poti-siyah-suet-fermuarli-kadin-bot/",
+        "https://www.midashoes.com/mida-shoes-201-nude-deri-fermuarli-kadin-bot/",
+        "https://www.midashoes.com/mida-shoes-5000-ten-deri-lastikli-kadin-bot/",
+        "https://www.midashoes.com/need",
+        "https://www.midashoes.com/need",
+        "https://www.midashoes.com/mida-shoes-6101-beyaz-deri-fermuarli-kadin-spor-bot/",
+        "https://www.midashoes.com/mida-shoes-kkovboy-siyah-deri-lastikli-kadin-bot/",
+        "https://www.midashoes.com/mida-shoes-morty-siyah-deri-kadin-bot/",
+        "https://www.midashoes.com/need",
+        "https://www.midashoes.com/mida-shoes-8012-siyah-deri-topuklu-kadin-cizme/",
+        "https://www.midashoes.com/mida-shoes-8012-ten-deri-kadin-cizme/",
+        "https://www.midashoes.com/need",
+        "https://www.midashoes.com/mida-shoes-cowboy-siyah-deri-topuklu-kadin-cizme/"
     ],
     "barkod": [
         "RNNY102YSLCLT",
@@ -1833,8 +1847,21 @@
         "RNNY3033BYZCLT",
         "RNNY3033SYHCLT",
         "RNNY3033GLDCLT",
-        "RNNY3033TENCLT"
-
+        "RNNY3033TENCLT",
+        "RNNPOTİSYHCLT",
+        "RNNPOTİSYHSUET",
+        "RNN201NUDECLT",
+        "RNN5000TENCLT",
+        "RNN901SYHCLT",
+        "RNN901SYHSUET",
+        "RNNK6101TENCLT",
+        "RNNKKOVBOYSYHCLT",
+        "RNNKMORTYSSYHCLT",
+        "RNNKKPLATOTENCLT",
+        "RNN8012SYHCLT",
+        "RNN8012TENCLT",
+        "RNN716TABASUET",
+        "RNNCOWBOYSYHCLT"
 
     ],
     "id": [
@@ -2753,6 +2780,20 @@
         "#product_attribute_6525_ 22727",
         "#product_attribute_6526_ 22733",
         "#product_attribute_6527_ 22739",
-        "#product_attribute_6528_ 22745"
+        "#product_attribute_6528_ 22745",
+        "#product_attribute_6825_ 24527",
+        "#product_attribute_6826_ 24533",
+        "#product_attribute_6919_ 25091",
+        "#product_attribute_6916_ 25073",
+        "need",
+        "need",
+        "#product_attribute_5574_ 17058",
+        "#product_attribute_6824_ 24521",
+        "#product_attribute_5690_ 17718",
+        "need",
+        "#product_attribute_6912_ 25049",
+        "#product_attribute_6914_ 25061",
+        "need",
+        "#product_attribute_6922_ 25109"
     ]
 }
