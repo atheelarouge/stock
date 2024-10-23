@@ -22,11 +22,18 @@ const erb_expExl = require('../stock/erb_stok/erb_export.js')
 const rnn_reklam = require('../reklam/rnn_reklam.js')
 const rnn_write = require('../reklam/rnn_write.js')
 const oto_reklam = require('../reklam/oto_reklam.js')
+const oto_rds = require('../stock/rds_stok/oto_rds')
+const oto_reklam = require('../reklam_mida/oto_reklam_mida.js')
 
 program
   .command('oto_reklam')
   .description('Oto CPC')
   .action(oto_reklam)
+
+program
+  .command('oto_reklam_mida')
+  .description('Oto CPC Mida')
+  .action
 
 program
   .command('rnn_write')
@@ -119,7 +126,7 @@ program
   .description('Co Stok')
   .action(co_stok)
 
-  program
+program
   .command('oto_erb')
   .description('Erbilden Stok')
   .action(oto_erb)
@@ -133,6 +140,11 @@ program
   .command('exl_erb')
   .description('Erbilden Excel Çıkarır')
   .action(erb_expExl)
+
+program
+  .command('oto_rds')
+  .description('Radias Stok')
+  .action(oto_rds)
 
 
 program.parse(process.argv)

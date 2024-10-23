@@ -5,15 +5,15 @@ const puppeteer = require('puppeteer');
 const path = require('path');
 
 
-async function stokCo() {
+async function stokErb() {
   await (async function () {
-    const PORT = 5648;
+    const PORT = 8476;
 
     const app = express()
 
     const loadNotes = () => {
       try {
-        const dataBuffer = fs.readFileSync("D:/Own_Projects/07_web_scarper/data.json")// need revision
+        const dataBuffer = fs.readFileSync("D:/Own_Projects/07_web_scarper/stock/rds_stok/dataRDS.json")// need revision
         const dataJSON = dataBuffer.toString()
         return JSON.parse(dataJSON)
 
@@ -24,14 +24,14 @@ async function stokCo() {
 
     const saveNotes = (num) => {
       const dataJSON = JSON.stringify(num)
-      fs.writeFileSync('D:/Own_Projects/07_web_scarper/data.json', dataJSON) // need revision
+      fs.writeFileSync('D:/Own_Projects/07_web_scarper/stock/rds_stok/dataRDS.json', dataJSON) // need revision
 
     }
 
     app.listen(PORT, () => console.log(chalk.bgGreen(`server running on PORT ${PORT}`)))
 
 
-    let json = JSON.parse(fs.readFileSync(path.join(__dirname, 'co_data.json')));
+    let json = JSON.parse(fs.readFileSync(path.join(__dirname, 'rds_veri.json')));
 
 
     let veriLenght = json.link.length
@@ -40,7 +40,7 @@ async function stokCo() {
     let idVeri = json.id
 
 
-    await (async function wagoon_fun1() {
+    await (async function erb_fun1() {
       try {
         await (async function () {
           const browser = await puppeteer.launch({
@@ -54,23 +54,23 @@ async function stokCo() {
           // Login
           const page = await browser.newPage();
 
-          await page.goto("https://www.bayico.com/index.php?route=account/login", {
-            waitUntil: 'networkidle2'
-          })
-          await page.waitForSelector("#content > div > div:nth-child(2) > div > form > input")
+          // await page.goto("https://www.xmlcim.com/index.php?route=account/login", {
+          //   waitUntil: 'networkidle2'
+          // })
+          // await page.waitForSelector("#content > div > div:nth-child(2) > div")
 
-          await page.type('input[placeholder="E-Posta Adresi"]', 'tuncaymaliev@gmail.com', {
-            delay: 200
-          })
+          // await page.type('input[placeholder="E-Posta Adresi"]', 'tuncaymaliev@gmail.com', {
+          //   delay: 200
+          // })
 
-          await page.type('input[placeholder="Parola"]', 'tma200786', {
-            delay: 200
-          })
-          await page.click("#content > div > div:nth-child(2) > div > form > input", {
-            delay: 200
-          })
+          // await page.type('input[placeholder="Parola"]', 'tma200786', {
+          //   delay: 200
+          // })
+          // await page.click("#content > div > div:nth-child(2) > div > form > input", {
+          //   delay: 200
+          // })
 
-          await page.waitForSelector('#logo')
+          // await page.waitForSelector('#logo')
 
           // Loop Function
            for (i = 0; i < veriLenght; i++ ) {
@@ -82,125 +82,98 @@ async function stokCo() {
             await (async function() {
               const idNum = Number(idVeri[i])
 
-              let idNum39 = idNum-1
-              let idNum40 = idNum
-              let idNum41 = idNum+1
-              let idNum42 = idNum+2
-              let idNum43 = idNum+3
-              let idNum44 = idNum+4
-              let idNum45 = idNum+5
+              let idNum36 = idNum
 
-              let idNumSon39 = idNum39.toString()
-              let idNumSon40 = idNum40.toString()
-              let idNumSon41 = idNum41.toString()
-              let idNumSon42 = idNum42.toString()
-              let idNumSon43 = idNum43.toString()
-              let idNumSon44 = idNum44.toString()
-              let idNumSon45 = idNum45.toString()
+              let idNumSon36 = idNum36.toString()
+
 
               try {
-                var boa01_39 = await page.evaluate((idNumSon39) => {
-                  try {
-                    return document.querySelector(`input[value="${idNumSon39}"]`).nextElementSibling.innerHTML.slice(1,4).replace('A', '')
-                  } catch {
-                    return 0
-                  }
-                  
-                },(idNumSon39))
-                var boa01_40 = await page.evaluate((idNumSon40) => {
-                  try {
-                    return document.querySelector(`input[value="${idNumSon40}"]`).nextElementSibling.innerHTML.slice(1,4).replace('A', '')
-                  } catch {
-                    return 0
-                  }
-                },(idNumSon40))
-                var boa01_41 = await page.evaluate((idNumSon41) => {
-                  try {
-                    return document.querySelector(`input[value="${idNumSon41}"]`).nextElementSibling.innerHTML.slice(1,4).replace('A', '')
-                  } catch {
-                    return 0
-                  }
-                },(idNumSon41))
-                var boa01_42 = await page.evaluate((idNumSon42) => {
-                  try {
-                    return document.querySelector(`input[value="${idNumSon42}"]`).nextElementSibling.innerHTML.slice(1,4).replace('A', '')
-                  } catch {
-                    return 0
-                  }
-                },(idNumSon42))
-                var boa01_43 = await page.evaluate((idNumSon43) => {
-                  try {
-                    return document.querySelector(`input[value="${idNumSon43}"]`).nextElementSibling.innerHTML.slice(1,4).replace('A', '')
-                  } catch {
-                    return 0
-                  }
-                },(idNumSon43))
 
-                var boa01_44 = await page.evaluate((idNumSon44) => {
+                var erb01_36 = await page.evaluate((idNumSon36) => {
                   try {
-                    return document.querySelector(`input[value="${idNumSon44}"]`).nextElementSibling.innerHTML.slice(1,4).replace('A', '')
+                    return document.querySelector(`#input-option${idNumSon36} > div:nth-child(1) > label > span > small`).textContent.trim().replace("(", "").replace(")", "")
                   } catch {
                     return 0
                   }
-                },(idNumSon44))
+                },(idNumSon36))
 
-                var boa01_45 = await page.evaluate((idNumSon45) => {
+                var erb01_37 = await page.evaluate((idNumSon36) => {
                   try {
-                    return document.querySelector(`input[value="${idNumSon45}"]`).nextElementSibling.innerHTML.slice(1,4).replace('A', '')
+                    return document.querySelector(`#input-option${idNumSon36} > div:nth-child(2) > label > span > small`).textContent.trim().replace("(", "").replace(")", "")
                   } catch {
                     return 0
                   }
-                },(idNumSon45))
+                },(idNumSon36))
+
+                var erb01_38 = await page.evaluate((idNumSon36) => {
+                  try {
+                    return document.querySelector(`#input-option${idNumSon36} > div:nth-child(3) > label > span > small`).textContent.trim().replace("(", "").replace(")", "")
+                  } catch {
+                    return 0
+                  }
+                },(idNumSon36))
+
+                var erb01_39 = await page.evaluate((idNumSon36) => {
+                  try {
+                    return document.querySelector(`#input-option${idNumSon36} > div:nth-child(4) > label > span > small`).textContent.trim().replace("(", "").replace(")", "")
+                  } catch {
+                    return 0
+                  }
+                },(idNumSon36))
+
+                var erb01_40 = await page.evaluate((idNumSon36) => {
+                  try {
+                    return document.querySelector(`#input-option${idNumSon36} > div:nth-child(5) > label > span > small`).textContent.trim().replace("(", "").replace(")", "")
+                  } catch {
+                    return 0
+                  }
+                },(idNumSon36))
+
+                
 
                 data = loadNotes()
 
                 data.push({
+                  "Barkod": `${barkodVeri[i]}35`,
+                  "Piyasa Satış Fiyatı (KDV Dahil)": "",
+                  "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
+                  "Ürün Stok Adedi": 0,
+                })
+    
+    
+                data.push({
+                  "Barkod": `${barkodVeri[i]}36`,
+                  "Piyasa Satış Fiyatı (KDV Dahil)": "",
+                  "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
+                  "Ürün Stok Adedi": erb01_36 === "Talep Et" ? 0 : Math.max(0, parseInt(erb01_36)),
+                })
+    
+                data.push({
+                  "Barkod": `${barkodVeri[i]}37`,
+                  "Piyasa Satış Fiyatı (KDV Dahil)": "",
+                  "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
+                  "Ürün Stok Adedi": erb01_37 === "Talep Et" ? 0 : Math.max(0, parseInt(erb01_37)),
+                })
+    
+                data.push({
+                  "Barkod": `${barkodVeri[i]}38`,
+                  "Piyasa Satış Fiyatı (KDV Dahil)": "",
+                  "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
+                  "Ürün Stok Adedi": erb01_38 === "Talep Et" ? 0 : Math.max(0, parseInt(erb01_38)),
+                })
+    
+                data.push({
                   "Barkod": `${barkodVeri[i]}39`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(boa01_39)-1,
+                  "Ürün Stok Adedi": erb01_39 === "Talep Et" ? 0 : Math.max(0, parseInt(erb01_39)),
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}40`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(boa01_40)-1,
-                })
-    
-                data.push({
-                  "Barkod": `${barkodVeri[i]}41`,
-                  "Piyasa Satış Fiyatı (KDV Dahil)": "",
-                  "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(boa01_41)-1,
-                })
-    
-                data.push({
-                  "Barkod": `${barkodVeri[i]}42`,
-                  "Piyasa Satış Fiyatı (KDV Dahil)": "",
-                  "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(boa01_42)-1,
-                })
-    
-                data.push({
-                  "Barkod": `${barkodVeri[i]}43`,
-                  "Piyasa Satış Fiyatı (KDV Dahil)": "",
-                  "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(boa01_43)-1,
-                })
-    
-                data.push({
-                  "Barkod": `${barkodVeri[i]}44`,
-                  "Piyasa Satış Fiyatı (KDV Dahil)": "",
-                  "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(boa01_44)-1,
-                })
-    
-                data.push({
-                  "Barkod": `${barkodVeri[i]}45`,
-                  "Piyasa Satış Fiyatı (KDV Dahil)": "",
-                  "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(boa01_45),
+                  "Ürün Stok Adedi": erb01_40 === "Talep Et" ? 0 : Math.max(0, parseInt(erb01_40)),
                 })
     
                 await saveNotes(data)
@@ -211,42 +184,42 @@ async function stokCo() {
                 data = loadNotes()
     
                 data.push({
-                  "Barkod": `${barkodVeri[i]}40`,
+                  "Barkod": `${barkodVeri[i]}35`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
                   "Ürün Stok Adedi": 0,
                 })
     
                 data.push({
-                  "Barkod": `${barkodVeri[i]}41`,
+                  "Barkod": `${barkodVeri[i]}36`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
                   "Ürün Stok Adedi": 0,
                 })
     
                 data.push({
-                  "Barkod": `${barkodVeri[i]}42`,
+                  "Barkod": `${barkodVeri[i]}37`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
                   "Ürün Stok Adedi": 0,
                 })
     
                 data.push({
-                  "Barkod": `${barkodVeri[i]}43`,
+                  "Barkod": `${barkodVeri[i]}38`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
                   "Ürün Stok Adedi": 0,
                 })
     
                 data.push({
-                  "Barkod": `${barkodVeri[i]}44`,
+                  "Barkod": `${barkodVeri[i]}39`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
                   "Ürün Stok Adedi": 0,
                 })
   
                 data.push({
-                  "Barkod": `${barkodVeri[i]}45`,
+                  "Barkod": `${barkodVeri[i]}40`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
                   "Ürün Stok Adedi": 0,
@@ -277,4 +250,4 @@ async function stokCo() {
 }
 
 
-module.exports = stokCo
+module.exports = stokErb

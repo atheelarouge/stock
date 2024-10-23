@@ -106,35 +106,35 @@ async function stok_Knack() {
                   "Barkod": `${barkodVeri[i]}40`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(knk01_40)-1,
+                  "Ürün Stok Adedi": knk01_40 === "" || parseInt(knk01_40) - 1 < 0 ? 0 : parseInt(knk01_40) - 1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}41`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(knk01_41)-1,
+                  "Ürün Stok Adedi": knk01_41 === "" || parseInt(knk01_41) - 1 < 0 ? 0 : parseInt(knk01_41) - 1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}42`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(knk01_42)-1,
+                  "Ürün Stok Adedi": knk01_42 === "" || parseInt(knk01_42) - 1 < 0 ? 0 : parseInt(knk01_42) - 1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}43`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(knk01_43)-1,
+                  "Ürün Stok Adedi": knk01_43 === "" || parseInt(knk01_43) - 1 < 0 ? 0 : parseInt(knk01_43) - 1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}44`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(knk01_44)-1,
+                  "Ürün Stok Adedi": knk01_44 === "" || parseInt(knk01_44) - 1 < 0 ? 0 : parseInt(knk01_44) - 1,
                 })
     
                 await saveNotes(data)

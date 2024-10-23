@@ -51,26 +51,28 @@ async function stokBoa() {
             defaultViewport: null,
           })
 
+
           // Login
           const page = await browser.newPage();
-
+          
           await page.goto("https://www.bayiboa.com/index.php?route=account/login", {
-            waitUntil: 'networkidle2'
-          })
-          await page.waitForSelector("#content > div > div:nth-child(2) > div > form > input")
-
-          await page.type('input[placeholder="E-Posta Adresi"]', 'tuncaymaliev@gmail.com', {
-            delay: 200
+            waitUntil: 'networkidle0'
           })
 
-          await page.type('input[placeholder="Parola"]', 'wickeda14+', {
-            delay: 200
-          })
-          await page.click("#content > div > div:nth-child(2) > div > form > input", {
-            delay: 200
-          })
+          //await page.waitForSelector("#content > div > div:nth-child(2) > div > form > input")
 
-          await page.waitForSelector('#logo')
+          //await page.type('input[placeholder="E-Posta Adresi"]', 'tuncaymaliev@gmail.com', {
+           // delay: 200
+          //})
+
+          //await page.type('input[placeholder="Parola"]', 'wickeda14+', {
+          //  delay: 200
+          //})
+          //await page.click("#content > div > div:nth-child(2) > div > form > input", {
+          //  delay: 200
+          //})
+
+          // await page.waitForSelector('#logo')
 
           // Loop Function
            for (i = 0; i < veriLenght; i++ ) {
@@ -158,49 +160,49 @@ async function stokBoa() {
                   "Barkod": `${barkodVeri[i]}39`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(boa01_39)-1,
+                  "Ürün Stok Adedi": boa01_39 === "" || parseInt(boa01_39) - 1 < 0 ? 0 : parseInt(boa01_39) - 1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}40`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(boa01_40)-1,
+                  "Ürün Stok Adedi": boa01_40 === "" || parseInt(boa01_40) - 1 < 0 ? 0 : parseInt(boa01_40) - 1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}41`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(boa01_41)-1,
+                  "Ürün Stok Adedi": boa01_41 === "" || parseInt(boa01_41) - 1 < 0 ? 0 : parseInt(boa01_41) - 1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}42`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(boa01_42)-1,
+                  "Ürün Stok Adedi": boa01_42 === "" || parseInt(boa01_42) - 1 < 0 ? 0 : parseInt(boa01_42) - 1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}43`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(boa01_43)-1,
+                  "Ürün Stok Adedi": boa01_43 === "" || parseInt(boa01_43) - 1 < 0 ? 0 : parseInt(boa01_43) - 1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}44`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(boa01_44)-1,
+                  "Ürün Stok Adedi": boa01_44 === "" || parseInt(boa01_44) - 1 < 0 ? 0 : parseInt(boa01_44) - 1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}45`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(boa01_45)-1,
+                  "Ürün Stok Adedi": boa01_45 === "" || parseInt(boa01_45) - 1 < 0 ? 0 : parseInt(boa01_45) - 1,
                 })
     
                 await saveNotes(data)

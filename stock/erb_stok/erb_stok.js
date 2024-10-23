@@ -45,8 +45,8 @@ async function stokErb() {
         await (async function () {
           const browser = await puppeteer.launch({
             headless: true,
-            executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe',
-            userDataDir: '/Users/athee/Library/Application Support/Google/Chrome/Default',
+            //executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe',
+            //userDataDir: '/Users/athee/Library/Application Support/Google/Chrome/Default',
             timeout: 0,
             defaultViewport: null,
           })
@@ -155,42 +155,42 @@ async function stokErb() {
                   "Barkod": `${barkodVeri[i]}35`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(erb01_35)-1,
+                  "Ürün Stok Adedi": erb01_35 === "" || parseInt(erb01_35) - 1 < 0 ? 0 : parseInt(erb01_35) - 1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}36`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(erb01_36)-1,
+                  "Ürün Stok Adedi": erb01_36 === "" || parseInt(erb01_36) - 1 < 0 ? 0 : parseInt(erb01_36) - 1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}37`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(erb01_37)-1,
+                  "Ürün Stok Adedi": erb01_37 === "" || parseInt(erb01_37) - 1 < 0 ? 0 : parseInt(erb01_37) - 1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}38`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(erb01_38)-1,
+                  "Ürün Stok Adedi": erb01_38 === "" || parseInt(erb01_38) - 1 < 0 ? 0 : parseInt(erb01_38) - 1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}39`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(erb01_39)-1,
+                  "Ürün Stok Adedi": erb01_39 === "" || parseInt(erb01_39) - 1 < 0 ? 0 : parseInt(erb01_39) - 1,
                 })
     
                 data.push({
                   "Barkod": `${barkodVeri[i]}40`,
                   "Piyasa Satış Fiyatı (KDV Dahil)": "",
                   "Trendyol'da  Satılacak Fiyat (KDV Dahil)": "",
-                  "Ürün Stok Adedi": parseInt(erb01_40)-1,
+                  "Ürün Stok Adedi": erb01_40 === "" || parseInt(erb01_40) - 1 < 0 ? 0 : parseInt(erb01_40) - 1,
                 })
     
                 await saveNotes(data)

@@ -36,8 +36,8 @@
     "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-gunluk-suet-ayakkabi-040-turuncu",
     "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-gunluk-ayakkabi-044-siyah-siyah-taban",
     "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-gunluk-ayakkabi-044-siyah-beyaz-taban",
-    "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-gunluk-ayakkabi-044-siyah-kurukafa",
-    "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-gunluk-ayakkabi-044-beyaz-kurukafa",
+    "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-renkli-baskili-gunluk-ayakkabi-046-siyah-kurukafa",
+    "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-renkli-baskili-gunluk-ayakkabi-046-beyaz-kurukafa",
     "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-gunluk-ayakkabi-044-gri",
     "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-gunluk-ayakkabi-044-haki",
     "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-gunluk-ayakkabi-044-kirmizi",
@@ -237,7 +237,11 @@
     "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-chelsea-bot-112-siyah-bej-taban",
     "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-chelsea-bot-112-siyah-suet-bej-taban",
     "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-chelsea-bot-112-taba-suet",
-    "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-chelsea-bot-112-vizon-suet"
+    "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-chelsea-bot-112-vizon-suet",
+    "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-gunluk-ayakkabi-555-mat-kahverengi",
+    "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-gunluk-ayakkabi-555-parlak-gri",
+    "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-gunluk-ayakkabi-555-parlak-kahverengi",
+    "https://www.bayiknack.com/urun/knack-knack-yuksek-taban-gunluk-ayakkabi-555-mat-taba"
 
 
   ],
@@ -479,7 +483,11 @@
       "RNNKNK112SYHCLTBJT",
       "RNNKNK112SYHSUETBJT",
       "RNNKNK112TABASUETBJT",
-      "RNNKNK112VZNSUETVT"
+      "RNNKNK112VZNSUETVT",
+      "RNNKNK555KHVMTBTCLT",
+      "RNNKNK555GRİRGNBT",
+      "RNNKNK555KHVRGNBT",
+      "RNNKNK555TABAMTBTCLT"
 
 
 
